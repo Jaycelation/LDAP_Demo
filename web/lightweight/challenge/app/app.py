@@ -15,14 +15,14 @@ def login():
         server = Server('localhost', port=389, get_info=ALL)
 
         conn = Connection(server, 
-                          user=f'cn=admin,dc=bts,dc=ctf',
+                          user=f'cn=admin,dc=rat,dc=ctf',
                           password=ADMIN_PASSWORD,
                           auto_bind=True)
         
         if not conn.bind():
             return 'Failed to connect to LDAP server', 500
 
-        conn.search('ou=people,dc=bts,dc=ctf', f'(&(employeeType=active)(uid={username})(userPassword={password}))', attributes=['uid'])
+        conn.search('ou=people,dc=rat,dc=ctf', f'(&(employeeType=active)(uid={username})(userPassword={password}))', attributes=['uid'])
 
         if not conn.entries:
             return 'Invalid credentials', 401

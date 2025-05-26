@@ -4,7 +4,7 @@ slapd slapd/internal/generated_adminpw password STYE0P8dg55WGLAkFobiwMSJKix1QqpH
 slapd slapd/password2 password STYE0P8dg55WGLAkFobiwMSJKix1QqpH
 slapd slapd/unsafe_selfwrite_acl note
 slapd slapd/purge_database boolean false
-slapd slapd/domain string bts.ctf
+slapd slapd/domain string rat.ctf
 slapd slapd/ppolicy_schema_needs_update select abort installation
 slapd slapd/invalid_config boolean true
 slapd slapd/move_old_database boolean false
